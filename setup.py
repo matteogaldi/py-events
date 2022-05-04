@@ -10,7 +10,7 @@ setup(
     description='A simple event emitter for Python',
     long_description=open(path.join(HERE, 'README.md'), encoding='utf-8').read(),
     long_description_content_type='text/markdown',
-    url='https://github.com/matteogaldi/py-eventemitter',
+    url='https://github.com/matteogaldi/py-events',
     author='Matteo Galdi',
     license='MIT',
     packages=find_packages(exclude=['contrib', 'docs', 'tests']),
