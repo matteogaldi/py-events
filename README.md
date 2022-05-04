@@ -15,14 +15,20 @@ import events
 
 ee = events.EventEmitter()
 
+
+def my_event_handler(e):
+    print(f"Event received: {e}")
+
+
 # Register a listener
-ee.on_('event', lambda: print('event'))
+ee.on_('event', my_event_handler)
 
 # Emit an event
 ee.emit('event')
 
 # Remove a listener
-ee.remove_listener('event', lambda: print('event'))
+ee.remove_listener('event', my_event_handler)
+ee.off('event', my_event_handler)
 
 # set max listeners for an event
 ee.set_max_listeners('event', 1)
@@ -41,6 +47,7 @@ def event():
 ```
 
 ### Build instructions
+
 `pip install build`
 
 `python -m build`
