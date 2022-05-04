@@ -4,7 +4,9 @@ A very basic event emitter for Python.
 
 ### Installation
 
-`pip install NO_NAME`
+Download the latest release [here](https://github.com/matteogaldi/py-events/releases)
+
+`pip install py_events-0.1.0-py3-none-any.whl`
 
 ### Getting Started
 
@@ -25,14 +27,21 @@ ee.remove_listener('event', lambda: print('event'))
 # set max listeners for an event
 ee.set_max_listeners('event', 1)
 
+
 # Decorator
 @ee.on('event')
 def event():
     print('event')
+
 
 # Decorator only once
 @ee.once('event')
 def event():
     print('event')
 ```
+
+### Build instructions
+`pip install build`
+
+`python -m build`
 
